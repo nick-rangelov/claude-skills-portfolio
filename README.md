@@ -1,5 +1,7 @@
 # Claude Skills Portfolio
 
+![tests](https://github.com/nick-rangelov/claude-skills-portfolio/actions/workflows/ci.yml/badge.svg)
+
 Three reusable Claude skills for common analyst and operations work, each with a defined output format, rules, example inputs and automated checks.
 
 | Skill | What it does |
