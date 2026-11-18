@@ -1,0 +1,1 @@
+Last Friday our weekly customer export went out with 312 duplicate rows. Three customers received two invoices. The export is produced by a scheduled script that reads from a staging table. The script was changed on Wednesday to add a new column. Nobody noticed until a customer called. We have no row-count check on the export.

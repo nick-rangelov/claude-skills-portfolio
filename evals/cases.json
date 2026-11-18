@@ -1,0 +1,47 @@
+{
+  "root-cause-analysis": [
+    {
+      "name": "duplicate export",
+      "input": "skills/root-cause-analysis/examples/input-01.md",
+      "sample_output": "skills/root-cause-analysis/examples/sample-output-01.md",
+      "criteria": [
+        "uses all six required headings in order",
+        "contains between 3 and 5 numbered whys",
+        "every why has Evidence or Assumption",
+        "root cause names a process or control gap, not a person",
+        "actions include corrective, preventive and detective types"
+      ]
+    }
+  ],
+  "gap-analysis": [
+    {
+      "name": "manual payment approvals",
+      "input": "skills/gap-analysis/examples/input-01.md",
+      "sample_output": "skills/gap-analysis/examples/sample-output-01.md",
+      "criteria": [
+        "uses all four required headings in order",
+        "gap table has Requirement, Current state, Gap, Priority and Action columns",
+        "no requirement is marked None without evidence",
+        "summary counts match the table"
+      ]
+    }
+  ],
+  "payments-reconciliation-checker": [
+    {
+      "name": "sample ledger vs processor",
+      "inputs": ["skills/payments-reconciliation-checker/examples/ledger.csv", "skills/payments-reconciliation-checker/examples/processor.csv"],
+      "expected": {
+        "matched": ["TX001", "TX003"],
+        "missing_in_b": ["TX005"],
+        "missing_in_a": ["TX006"],
+        "amount_mismatches": ["TX002"],
+        "currency_mismatches": ["TX004"]
+      },
+      "criteria": [
+        "numbers come from the script, not recalculated",
+        "reasons are labelled Hypothesis",
+        "each exception has a next step"
+      ]
+    }
+  ]
+}
